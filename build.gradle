@@ -9,8 +9,6 @@ buildscript {
         classpath 'me.tatarka:gradle-retrolambda:3.6.1' //Java 8 BackPort
         classpath 'io.realm:realm-gradle-plugin:3.3.2' //Realm DB
         classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2' //Lombok for retrolambda
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 

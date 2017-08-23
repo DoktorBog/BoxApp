@@ -14,4 +14,5 @@ import io.box.boxapp.network.repositorys.RetrofitRestRepository;
 public interface AppComponent {
     void inject(BoxAppApplication application);
     RetrofitRestRepository retrofitRestRepository();
+
 }

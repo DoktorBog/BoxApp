@@ -5,6 +5,5 @@ public interface Presenter<T> {
     void onStart();
     void onStop();
     void onPause();
-    void getItems();
     void attachView(T view);
 }

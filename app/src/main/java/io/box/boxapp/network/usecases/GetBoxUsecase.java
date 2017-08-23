@@ -4,13 +4,13 @@ import io.box.boxapp.models.BoxResponse;
 import io.box.boxapp.network.repositorys.Repository;
 import io.reactivex.Observable;
 
-public class FetchProductUsecase implements Usecase<BoxResponse>  {
+public class GetBoxUsecase implements Usecase<BoxResponse>  {
 
     private Repository repository;
     private int id;
     private int colorId;
 
-    public FetchProductUsecase(Repository repository) {
+    public GetBoxUsecase(Repository repository) {
         this.repository = repository;
     }
 

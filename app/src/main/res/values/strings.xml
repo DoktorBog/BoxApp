@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BoxApp</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="error_validate_email">Enter valid email</string>
+    <string name="eror_write_pass">Enter password</string>
+    <string name="password_chars_error">At least 5 characters</string>
+    <string name="password_short_error">passwort to short</string>
+    <string name="no_user">No user with such email or password</string>
 </resources>

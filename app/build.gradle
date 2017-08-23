@@ -10,7 +10,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 2
-        versionName "1.0.1"
+        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -18,6 +18,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -30,33 +35,30 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
-    //RxJava libs
+    /**
+     * RxJava libs
+     */
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
 
-    //Retrofit
+    /**
+     * Retrofit with OkHttp client
+     */
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
 
-    //Dagger 2
-    compile 'com.google.dagger:dagger:2.10-rc4'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.10-rc4'
+    compile 'com.google.dagger:dagger:2.10-rc4' //Dagger 2
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.10-rc4' //Dagger 2 compiler
+    compile 'com.jakewharton:butterknife:8.6.0' //View binding
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0' //View binding compiler
+    compile 'net.hockeyapp.android:HockeySDK:4.1.4'  //Hockey APP SDK
+    compile 'io.realm:android-adapters:2.0.0' //Realm adapter
+    provided 'org.projectlombok:lombok:1.16.8'  //Lombok
 
-    //View binding
-    compile 'com.jakewharton:butterknife:8.6.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-
-    //Hockey APP SDK
-    compile 'net.hockeyapp.android:HockeySDK:4.1.4'
-
-    //Realm adapter
-    compile 'io.realm:android-adapters:2.0.0'
-
-    //Lombok
-    provided 'org.projectlombok:lombok:1.16.8'
-
-    //Picasso
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    /**
+     * Additional libs
+     */
+    compile 'com.rengwuxian.materialedittext:library:2.1.4' // Material EditText backport
 
 }
