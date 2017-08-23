@@ -8,13 +8,13 @@ public class GetBoxUsecase implements Usecase<BoxResponse>  {
 
     private Repository repository;
     private int id;
-    private int colorId;
+    private String colorId;
 
     public GetBoxUsecase(Repository repository) {
         this.repository = repository;
     }
 
-    public Observable<BoxResponse> fetch(int id, int clolorId) {
+    public Observable<BoxResponse> fetch(int id, String clolorId) {
         this.id = id;
         this.colorId = colorId;
         return execute();

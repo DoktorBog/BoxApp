@@ -19,7 +19,7 @@ public class RetrofitRestRepository implements Repository {
     }
 
     @Override
-    public Observable<BoxResponse> boxSubscribe(int boxId, int boxColorId) {
+    public Observable<BoxResponse> boxSubscribe(int boxId, String boxColorId) {
         return apiService.boxSubscribe(boxId, boxColorId);
     }
 

@@ -2,6 +2,7 @@ package io.box.boxapp.ui;
 
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -27,6 +28,7 @@ public class SignActivity extends BaseActivity implements SignView{
     @BindView(R.id.password) MaterialEditText passwordEditText;
     @BindView(R.id.login) AppCompatButton login;
     @BindView(R.id.sign_action) TextView signAction;
+    @BindView(R.id.toolbar) Toolbar toolbar;
 
     private SignActivityComponent signActivityComponent;
     private boolean stateSignUp = false;
@@ -38,6 +40,7 @@ public class SignActivity extends BaseActivity implements SignView{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign);
         ButterKnife.bind(this);
+        initializeToolbar();
 
         signActivityComponent = DaggerSignActivityComponent.builder()
                 .appComponent(BoxAppApplication.getInstance().getAppComponent())
@@ -46,6 +49,11 @@ public class SignActivity extends BaseActivity implements SignView{
 
         signPresenter.onCreate();
         signPresenter.attachView(this);
+    }
+
+    public void initializeToolbar() {
+        toolbar.setTitle(getString(R.string.app_name));
+        setSupportActionBar(toolbar);
     }
 
     @Override
@@ -87,7 +95,7 @@ public class SignActivity extends BaseActivity implements SignView{
         if(!validatePassword())
             return;
 
-        /**
+        /*
          * mock of the network function that validates the new user and returns a valid user
          */
         // signPresenter.fetch(emailEditText.getText().toString(), passwordEditText.getText().toString(), stateSignUp);

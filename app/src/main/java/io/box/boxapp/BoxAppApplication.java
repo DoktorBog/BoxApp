@@ -4,7 +4,9 @@ import android.app.Application;
 
 import io.box.boxapp.dageer.components.AppComponent;
 import io.box.boxapp.dageer.components.DaggerAppComponent;
+import io.box.boxapp.models.realm.User;
 import io.realm.Realm;
+import io.realm.RealmResults;
 import lombok.Getter;
 
 public class BoxAppApplication extends Application {
@@ -29,4 +31,10 @@ public class BoxAppApplication extends Application {
         return mInstance;
     }
 
+    public static void logout(){
+        Realm.getDefaultInstance().executeTransaction(realm -> {
+            RealmResults<User> users = realm.where(User.class).findAll();
+            for (User user : users) user.setInApp(false);
+        });
+    }
 }

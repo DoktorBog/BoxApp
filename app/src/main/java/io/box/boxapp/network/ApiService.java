@@ -23,5 +23,5 @@ public interface ApiService {
                                     @Field("isSingUp") boolean isSingUp);
 
     @GET("subscribe")
-    Observable<BoxResponse> boxSubscribe(@Query("id") int boxId, @Query("color") int boxColorId);
+    Observable<BoxResponse> boxSubscribe(@Query("id") int boxId, @Query("color") String boxColorId);
 }

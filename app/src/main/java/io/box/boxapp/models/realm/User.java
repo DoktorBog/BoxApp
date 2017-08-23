@@ -1,5 +1,6 @@
 package io.box.boxapp.models.realm;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 import lombok.Getter;
@@ -17,4 +18,6 @@ public class User extends RealmObject{
     private String password;
     private String userInfo;
     private long timestamp;
+
+    private RealmList<Box> boxes = new RealmList<>();
 }

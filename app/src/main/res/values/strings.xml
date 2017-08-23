@@ -7,4 +7,5 @@
     <string name="password_chars_error">At least 5 characters</string>
     <string name="password_short_error">passwort to short</string>
     <string name="no_user">No user with such email or password</string>
+    <string name="get_box">GET BOX</string>
 </resources>

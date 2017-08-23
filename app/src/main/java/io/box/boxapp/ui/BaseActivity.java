@@ -12,6 +12,10 @@ public class BaseActivity extends AppCompatActivity {
         activity.finish();
     }
 
+    public static void launchWithOutFinish(Activity activity, Class<?> cls) {
+        activity.startActivity(new Intent(activity, cls));
+    }
+
     public static void launch(Intent intent, Activity activity){
         activity.startActivity(intent);
     }
