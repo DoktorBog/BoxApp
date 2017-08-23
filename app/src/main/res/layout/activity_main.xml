@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="mall cube (15 cm x 15 cm x 15 cm)"/>
+                    android:text="small cube (15 cm x 15 cm x 15 cm)"/>
 
                 <RadioButton
                     android:id="@+id/r_medium"
